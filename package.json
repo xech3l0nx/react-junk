@@ -40,9 +40,9 @@
     "gulp-webpack": "^1.5.0"
   },
   "scripts": {
-    "start": "SET NODE_ENV=production && .\\node_modules\\.bin\\babel-node --presets 'react,es2015' src/js/server.js",
-    "dev": ".\\node_modules\\.bin\\webpack-dev-server --progress --inline --hot",
-    "build": "SET NODE_ENV=production && .\\node_modules\\.bin\\webpack -p"
+    "start": "NODE_ENV=production && ./node_modules/.bin/babel-node --presets 'react,es2015' src/js/server.js",
+    "dev": "./node_modules/.bin/webpack-dev-server --progress --inline --hot",
+    "build": "NODE_ENV=production && ./node_modules/.bin/webpack -p"
   },
   "author": "",
   "license": "ISC"

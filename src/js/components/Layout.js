@@ -7,6 +7,7 @@ export default class Layout extends React.Component {
 		return(
 			<div>
 				<Navbar />
+				<div className="app-content">{this.props.children}</div>
 				<Footer />
 			</div>
 		)
