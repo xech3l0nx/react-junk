@@ -6,8 +6,7 @@ import Router from './routes';
 import store from "./store"
 
 window.onload = () => {
-	const app = document.getElementById('main')
-	ReactDOM.render(<Router store={store}></Router>, app);
+	ReactDOM.render(<Router store={store} />, document.getElementById('main'));
 }
 
 //Isomorphic applications principles
