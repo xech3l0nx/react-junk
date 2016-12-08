@@ -2,11 +2,11 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Provider } from "react-redux"
 
-import Router from './routes';
+import AppRoutes from './components/AppRoutes';
 import store from "./store"
 
 window.onload = () => {
-	ReactDOM.render(<Router store={store} />, document.getElementById('main'));
+	ReactDOM.render(<AppRoutes store={store} />, document.getElementById('main'));
 }
 
 //Isomorphic applications principles
