@@ -6,16 +6,16 @@ import Express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
+import { Provider } from 'react-redux'
 import routes from './routes';
 import NotFoundPage from './components/NotFound';
-
 
 const app = new Express();
 const server = new Server(app);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'))
 
-app.use(Express.static(path.join(__dirname, 'dist')));
+app.use(Express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req, res) => {
 	match({routes, location: req.url}, (err, redirectLocation, renderProps) => {
